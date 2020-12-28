@@ -22,7 +22,9 @@ Also include a timer to remind me having a break from my work from time to time.
 **To protect the display from burn in effects I have extended the Adafruit libs to include a dim function.**  
 
  * Adafruit_SSD1351.h  
+    ```
     void dim(uint8 contrastlevel = 15);  // Display contrast 0-15
+   ```
 
 
  * Adafruit_SSD1306.cpp  
