@@ -8,9 +8,9 @@ BME280 (DHT11), Touch-Sensor
 The BME280 sensor is more accurate and reliable than DHT11.
 
 
-![Office-Climate-Control](front.jpg "Front View")  
+![Office-Climate-Control](doc/front.jpg "Front View")  
 
-![Office-Climate-Control](back.jpg "Back View")  
+![Office-Climate-Control](doc/back.jpg "Back View")  
 
 The goal is to display the sensor values in green, yellow, red, cyan based on their values.
 Also include a timer to remind me having a break from my work from time to time.  
