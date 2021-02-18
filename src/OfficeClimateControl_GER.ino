@@ -1,18 +1,18 @@
-// ###################################################################################
-// # Office-Climate-Control                                                          #
-// # Monitor the climate in your office and get warned when it's unhealthy           #
-// # or you should take a break.                                                     #
-// # Set a timer in 15min steps (15, 30, ..., 120min) to remind you to take a break. #
-// #                                                                                 #
-// # CO2-, Temp-, Hum-Sensor with Display and visual warnings and Break Timer.       #
-// # Based on Wemos D1 mini, MH-Z19B CO2-Sensor, OLED RGB 1.5" SPI Display 128x128,  #
-// # BME280, Touch-Sensor                                                            #
-// #                                                                                 #
-// # Version: 1.00   18.02.2021                                                      #
-// # https://github.com/chrisweather/Office-Climate-Control                          #
-// ###################################################################################
+// ##################################################################################
+// # Office-Climate-Control                                                         #
+// # Monitor the climate in your office and get warned when it's unhealthy          #
+// # or you should take a break.                                                    #
+// # Set a timer in 15min steps (15, 30, ..., 120min) to remind you to take a break #
+// #                                                                                #
+// # CO2-, Temp-, Hum-Sensor with Display and visual warnings and Break Timer       #
+// # Based on Wemos D1 mini, MH-Z19B CO2-Sensor, OLED RGB 1.5" SPI Display 128x128, #
+// # BME280, Touch-Sensor                                                           #
+// #                                                                                #
+// # Version: 1.01 GER  18.02.2021                                                  #
+// # https://github.com/chrisweather/Office-Climate-Control                         #
+// ##################################################################################
 
-#define VER  "1.0"
+#define VER  "1.0.1 GER"
 #define _TASK_SLEEP_ON_IDLE_RUN
 #include <SPI.h>
 #include <Wire.h>
@@ -140,10 +140,10 @@ void ReadSensor1()
   if (CO2value >= 1000) {  // Display current CO2 value and warning >=1000 ppm
     u8g2ada.setFont(u8g2_font_inb19_mf);
     u8g2ada.setForegroundColor(RED);
-    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Bitte")) / 2, 74);
-    u8g2ada.print("Bitte");    // "Please"
-    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("lüften!")) / 2, 103);
-    u8g2ada.print("lüften!");  // "ventilate!"
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("  Bitte  ")) / 2, 74);  // "Please"
+    u8g2ada.print("  Bitte  ");
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("lüften!")) / 2, 103);  // "ventilate!"
+    u8g2ada.print("lüften!");
   }
   else {
     clearArea(0, 0, 20, 21, BLACK);    // Clear left digit of CO2value
@@ -242,9 +242,9 @@ void BreakTimer()
     u8g2ada.setFont(u8g2_font_8x13_mf);
     u8g2ada.setForegroundColor(BLUE);
     u8g2ada.setCursor(1,125);
-    u8g2ada.print("Pause in ");
+    u8g2ada.print("Pause in ");  // "Break in "
     u8g2ada.print(tS3.getIterations());
-    u8g2ada.print(" min ");
+    u8g2ada.print(" min ");      // " min "
   }
   else {
     numberOfInterrupts = 0;
@@ -261,21 +261,25 @@ void BreakMsg()
   if (CO2value < 1000) {
     u8g2ada.setFont(u8g2_font_inb19_mf);
     u8g2ada.setForegroundColor(RED);
-    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Pause!")) / 2, 103);
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Mach 'ne")) / 2, 74);  // "Have a"
+    u8g2ada.print("Mach 'ne");
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Pause!")) / 2, 103);  // "Break!"
     u8g2ada.print("Pause!");
   }
   else {
     u8g2ada.setFont(u8g2_font_inb19_mf);
     u8g2ada.setForegroundColor(RED);
-    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Bitte")) / 2, 74);
-    u8g2ada.print("Bitte");
-    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("lüften!")) / 2, 103);
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("  Bitte  ")) / 2, 74);  // "Please"
+    u8g2ada.print("  Bitte  ");
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("lüften!")) / 2, 103);  // "ventilate!"
     u8g2ada.print("lüften!");
     delay(1000);
     clearArea(0, 54, 128, 58, BLACK);  // Clear message area
     u8g2ada.setFont(u8g2_font_inb19_mf);
     u8g2ada.setForegroundColor(RED);
-    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Pause!")) / 2, 103);
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Mach 'ne")) / 2, 74);  // "Have a"
+    u8g2ada.print("Mach 'ne");
+    u8g2ada.setCursor(64 - (u8g2ada.getUTF8Width("Pause!")) / 2, 103);  // "Break!"
     u8g2ada.print("Pause!");
     delay(1000);
   }
