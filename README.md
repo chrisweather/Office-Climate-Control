@@ -11,12 +11,15 @@ Version: 1.00   18.02.2021
 
 
 
-<img src="doc/front0.jpg" width="30%" alt="Front View" />) <img src="doc/back.jpg" width="30%" alt="Back View" />)
+<img src="doc/front0.jpg" width="30%" alt="Front View"/> <img src="doc/back.jpg" width="30%" alt="Back View"/>
 
-![Office-Climate-Control](doc/front1.jpg "Front View") ![Office-Climate-Control](doc/front2.jpg "Front View")
+
+<img src="doc/front1.jpg" width="30%" alt="Front View"/> <img src="doc/front2.jpg" width="30%" alt="Front View"/>
+
 
 The goal is to display the sensor values in green, yellow, red, cyan based on their values.
 Also include a timer to remind me having a break from my work from time to time.  
+
 
 **To Do List**
  * Think about how to use the additional sensor values Pressure and Altitude from BME280.
