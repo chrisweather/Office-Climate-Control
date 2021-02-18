@@ -1,24 +1,27 @@
 # Office-Climate-Control  
 A work in progress device to get familiar with ESP82xx, misc sensors, Github, etc.  
 
-CO2-, Temp-, Hum-Sensor with Display and visual warnings  
-Based on Wemos D1 mini, MH-Z19B CO2-Sensor, OLED RGB 1.5" Display 128x128,
-BME280 (DHT11), Touch-Sensor  
+Monitor the climate in your office and get warned when it's unhealthy or you should take a break.
+Set a timer in 15min steps (15, 30, ..., 120min) to remind you to take a break.
 
-The BME280 sensor is more accurate and reliable than DHT11.
+CO2-, Temp-, Hum-Sensor with Display and visual warnings and Break Timer.
+Based on Wemos D1 mini, MH-Z19B CO2-Sensor, OLED RGB 1.5" SPI Display 128x128, BME280, Touch-Sensor
+
+Version: 1.00   18.02.2021
 
 
-![Office-Climate-Control](doc/front.jpg "Front View")  
+![Office-Climate-Control](doc/front0.jpg "Front View")
 
-![Office-Climate-Control](doc/back.jpg "Back View")  
+![Office-Climate-Control](doc/back.jpg "Back View")
+
+![Office-Climate-Control](doc/front1.jpg "Front View")
+
+![Office-Climate-Control](doc/front2.jpg "Front View")
 
 The goal is to display the sensor values in green, yellow, red, cyan based on their values.
 Also include a timer to remind me having a break from my work from time to time.  
 
 **To Do List**
- * Develop a break timer which reminds me to have a break after x minutes.  
-  This timer will be controlled by the touch sensor inside the cover.  
- * Include u8g2 lib for better font handling
  * Think about how to use the additional sensor values Pressure and Altitude from BME280.
 
 
@@ -37,4 +40,3 @@ Also include a timer to remind me having a break from my work from time to time.
       sendCommand(SSD1351_CMD_CONTRASTMASTER, &contrastlevel, 1);
     }
    ```
-
