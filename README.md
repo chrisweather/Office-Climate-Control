@@ -10,13 +10,9 @@ Based on Wemos D1 mini, MH-Z19B CO2-Sensor, OLED RGB 1.5" SPI Display 128x128, B
 Version: 1.00   18.02.2021
 
 
-![Office-Climate-Control](doc/front0.jpg "Front View")
+![Office-Climate-Control](doc/front0.jpg "Front View") ![Office-Climate-Control](doc/back.jpg "Back View")
 
-![Office-Climate-Control](doc/back.jpg "Back View")
-
-![Office-Climate-Control](doc/front1.jpg "Front View")
-
-![Office-Climate-Control](doc/front2.jpg "Front View")
+![Office-Climate-Control](doc/front1.jpg "Front View") ![Office-Climate-Control](doc/front2.jpg "Front View")
 
 The goal is to display the sensor values in green, yellow, red, cyan based on their values.
 Also include a timer to remind me having a break from my work from time to time.  
