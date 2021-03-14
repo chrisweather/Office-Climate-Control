@@ -1,5 +1,4 @@
 # Office-Climate-Control
-[![LICENSE.txt][shield-license]][info-license]
 
 Copyright (c) 2020-2021, Christian Heinrichs.
 All rights reserved.
