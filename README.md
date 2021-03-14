@@ -1,4 +1,9 @@
-# Office-Climate-Control  
+# Office-Climate-Control
+
+Copyright (c) 2020-2021, Christian Heinrichs.
+All rights reserved.
+
+
 A work in progress device to get familiar with ESP82xx, misc sensors, Github, etc.  
 
 Monitor the climate in your office and get warned when it's unhealthy or you should take a break.

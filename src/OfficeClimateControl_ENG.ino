@@ -9,7 +9,10 @@
 // # BME280, Touch-Sensor                                                           #
 // #                                                                                #
 // # Version: 1.01 ENG  18.02.2021                                                  #
+// # Copyright (c) 2020-2021, Christian Heinrichs.                                  #
+// # All rights reserved.                                                           #
 // # https://github.com/chrisweather/Office-Climate-Control                         #
+// #                                                                                #
 // ##################################################################################
 
 #define VER  "1.0.1 ENG"
