@@ -1,6 +1,6 @@
 # Office-Climate-Control
 
-Copyright (c) 2020-2021, Christian Heinrichs.
+Copyright (c) 2020-2021 Christian Heinrichs.
 All rights reserved.
 
 
